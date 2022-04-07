@@ -1,0 +1,48 @@
+﻿
+@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+
+<html>
+<body>
+
+<script src="/JS/callToTeams.js"></script>
+   
+
+    @{
+        <section style="width: 100%; display: table">
+            <div style="display:table-row">
+                <div style="width: auto; display:table-cell;">
+
+                            <p id="welcomeMsg"></p>
+                    <div class="my-5 d-flex justify-content-center">
+                            <button class="btn btn-danger" id="record" disabled>Grabar</button>
+                            <button class="btn btn-primary" id="play" disabled>Reproducir</button>
+                            <button class="btn btn-secondary" id="download" disabled>Descargar</button>
+                            <button class="btn btn-secondary" id="send" disabled>Enviar</button>
+
+                    </div>
+                    <div id="error"></div>
+
+                    <div id="container mx-auto">
+                        <p id="timer"></p>  
+                        <video id="gum" class="mx-auto w-50 d-flex justify-content-center" autoplay muted></video>
+                        <progress class="progress-bar bg-info" value="0" max="10" id="progressBar"></progress>
+                        <h3 id="countdown"></h3>
+                        <video id="recorded" class="mx-auto w-50 d-flex justify-content-center" playsinline loop></video>
+                        <div>
+                            <span id="errorMsg"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    }
+
+<script src="/JS/app.js"></script>
+    
+
+</body>
+</html>
